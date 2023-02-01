@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-
+    public GameManager manager;
+    public int aritmak;
+    public GameObject YouFailed;
+    public GameObject YouWin;
     public GameObject[] Sahneler;
-    int artmak = 0;
     public GameObject ileributton;
+    public GameObject hizmetcidinleniyor;
+    public GameObject hizmetcizindanagider;
 
 
      public void degistiriciyedi()
@@ -59,17 +63,54 @@ public class ButtonScript : MonoBehaviour
 
         }
         Sahneler[14].SetActive(true);
-        ileributton.SetActive(true);
+        ileributton.SetActive(false);
      }
      public void mekanlariarat()
      {
         for (int i = 0; i < Sahneler.Length; i++)
         {
             Sahneler[i].SetActive(false);
-
+            
+            aritmak = 14;
+            manager.artmak = aritmak;
 
         }
         Sahneler[15].SetActive(true);
         ileributton.SetActive(true);
+        
+        
+     }
+
+     public void hizmetcizindan()
+     {
+        for (int i = 0; i < Sahneler.Length; i++)
+        {
+            Sahneler[i].SetActive(false);
+     }
+        hizmetcizindanagider.SetActive(true);
+     }
+
+    public void hizmetcidinle()
+    {
+        for (int i = 0; i < Sahneler.Length; i++)
+        {
+            Sahneler[i].SetActive(false);
+    }
+    hizmetcidinleniyor.SetActive(true);
+    }
+
+     public void Hatun()
+     {
+        YouFailed.SetActive(true);
+     }
+
+     public void Hizmetci()
+     {
+        YouFailed.SetActive(true);
+     }
+
+     public void Asci()
+     {
+        YouWin.SetActive(true);
      }
 }

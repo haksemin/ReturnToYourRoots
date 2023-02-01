@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField]
     public GameObject[] Sahneler;
-    int artmak = 0;
+    public int artmak = 0;
     public GameObject ileributton;
     
     // Start is called before the first frame update
@@ -43,9 +43,10 @@ public class GameManager : MonoBehaviour
             artmak = 5;
         }
         else if (artmak == 13 )
-        {
+        {   
             ileributton.SetActive(false);
-            artmak = 15;
+            
+            //artmak = 15;
         }
         else if (artmak == 14 )
         {
@@ -53,14 +54,19 @@ public class GameManager : MonoBehaviour
         }
         else if (artmak == 15 )
         {
+            ileributton.SetActive(true);
+            
+            //artmak = 5;
+        }
+        else if (artmak == 16)
+        {
             ileributton.SetActive(false);
-            artmak = 5;
         }
         else
         {
             ileributton.SetActive(true);
         }
-
+        Debug.Log(artmak);
         
      }
 
