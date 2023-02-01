@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -27,14 +28,15 @@ public class ButtonScript : MonoBehaviour
      }
 
      
-          public void degistiriciyemedi()
+   public void degistiriciyemedi()
      {
                 for (int i = 0; i < Sahneler.Length; i++)
         {
             Sahneler[i].SetActive(false);
-
+            
 
         }
+
         Sahneler[4].SetActive(true);
         ileributton.SetActive(true);
      }
